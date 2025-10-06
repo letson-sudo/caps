@@ -306,7 +306,7 @@ export default function CAPSPage() {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                <img
+                <Image
         src="/caps logo.png"
         alt="Heart icon"
         className="w-10 h-10"
@@ -877,7 +877,7 @@ export default function CAPSPage() {
               © 2025 CAPS. All rights reserved.
             </p>
           </div>
-cd        </div>
+       </div>
       </div>
 
       {/* Back to Top Button */}
