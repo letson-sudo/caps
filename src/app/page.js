@@ -271,6 +271,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { Heart, Users, Leaf, GraduationCap, Stethoscope, Scale, Mail, MapPin, Phone, Send, Menu, X, ArrowUp, ChevronRight, Eye, Target, CheckCircle, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 
 export default function CAPSPage() {
   const [scrolled, setScrolled] = useState(false)
