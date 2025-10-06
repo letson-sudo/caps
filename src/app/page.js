@@ -269,33 +269,33 @@
 
 
 "use client"
-import React, { useState, useEffect } from 'react';
-import { Heart, Users, Leaf, GraduationCap, Stethoscope, Scale, Mail, MapPin, Phone, Send, Menu, X, ArrowUp, ChevronRight, Eye, Target, CheckCircle, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Heart, Users, Leaf, GraduationCap, Stethoscope, Scale, Mail, MapPin, Phone, Send, Menu, X, ArrowUp, ChevronRight, Eye, Target, CheckCircle, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react'
 
 export default function CAPSPage() {
-  const [scrolled, setScrolled] = useState(false);
-  const [showBackToTop, setShowBackToTop] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [scrolled, setScrolled] = useState(false)
+  const [showBackToTop, setShowBackToTop] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      setShowBackToTop(window.scrollY > 500);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setScrolled(window.scrollY > 50)
+      setShowBackToTop(window.scrollY > 500)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+    e.preventDefault()
+    alert('Thank you for contacting us! We will get back to you soon.')
+    setFormData({ name: '', email: '', message: '' })
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-purple-50 text-slate-900 overflow-x-hidden">
@@ -361,12 +361,12 @@ export default function CAPSPage() {
       {/* IMAGE 1: Women's Empowerment Group */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-          <img
+          <Image
             src="/landing.jpg"
             alt="Peace Corps - The Budala Women's Group is on a mission to economically empower one another"
             className="w-full h-[500px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 flex justify-center ">
             <p className="text-2xl text-white max-w-3xl ">
               The Budala Women's Group is on a mission to economically empower one another
@@ -467,12 +467,12 @@ export default function CAPSPage() {
       {/* IMAGE 2: Child Marriage in Malawi */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-          <img
+          <Image
             src="/childMarriage.jpg"
             alt="Child Marriage in Malawi - HRW"
             className="w-full h-[500px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 flex justify-center">
             <p className="text-3xl text-white max-w-3xl">
               "I've Never Experienced Happiness": Child Marriage in Malawi
@@ -536,7 +536,7 @@ export default function CAPSPage() {
 
     {/* Right side - image that spans full height and width */}
     <div className="relative w-full h-full">
-      <img
+      <Image
         src="/health wellness.jpg"
         alt="Problems With Education in Malawi and How to Solve Them"
         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
@@ -555,7 +555,7 @@ export default function CAPSPage() {
 
     {/* Left side - Image that spans the full height */}
     <div className="relative w-full h-full order-2 lg:order-1">
-      <img
+      <Image
         src="/eduskills.jpg"
         alt="Malawi's school kids are using tablets to improve their reading and maths skills"
         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
@@ -610,7 +610,7 @@ export default function CAPSPage() {
 
     {/* Right side - Full-height image */}
     <div className="relative w-full h-full">
-      <img
+      <Image
         src="/agrienv.jpg"
         alt="Collaborative reforestation in Malawi supports ag, climate adaptation"
         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
@@ -625,7 +625,7 @@ export default function CAPSPage() {
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-10 shadow-xl border border-purple-200">
             <div className="rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
-              <img
+              <Image
                 src="/human rights.jpg"
                 alt="Facilitation Training for Women-led NGOs & CBOs in South Africa"
                 className="w-full h-80 object-cover hover:scale-110 transition-transform duration-500"
@@ -801,7 +801,7 @@ export default function CAPSPage() {
                   rows="5"
                   className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-purple-500 focus:outline-none transition-colors bg-slate-50 text-slate-900 resize-none"
                   placeholder="How can we help you?"
-                ></textarea>
+                 />
               </div>
 
               <button
@@ -852,7 +852,7 @@ export default function CAPSPage() {
           <div className="flex flex-col items-center space-y-6">
             {/* LOGO PLACEHOLDER - IMAGE 7 */}
             <div className="w-28 h-28 bg-slate-100 rounded-2xl border-2 border-slate-300 flex items-center justify-center shadow-lg">
-              <img
+              <Image
                 src="/caps logo.png"
                 alt="CAPS Logo"
                 className="w-full h-full object-contain p-4"
@@ -876,7 +876,7 @@ export default function CAPSPage() {
               © 2025 CAPS. All rights reserved.
             </p>
           </div>
-        </div>
+cd        </div>
       </div>
 
       {/* Back to Top Button */}
@@ -889,5 +889,5 @@ export default function CAPSPage() {
         </button>
       )}
     </div>
-  );
+  )
 }
