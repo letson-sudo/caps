@@ -122,7 +122,7 @@ export default function CAPSPage() {
       <Head>
         <meta
           name="google-site-verification"
-          content="LCnEXzGGv3aBzoQQiS7trw-G4ciH1yypj8Ym-8EC_UQ"
+          content="EkHHajOOwHDl9LUj0Ofoic11cuVnrlQXeOhSojfKVUg"
         />
         <title>CAPS Malawi | Community Empowerment</title>
         <meta
