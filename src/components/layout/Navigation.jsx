@@ -6,6 +6,12 @@ import Image from 'next/image'
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const scrollToDonate = () => {
+  const donateSection = document.getElementById('donate')
+  if (donateSection) {
+    donateSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -29,9 +35,12 @@ export default function Navigation() {
             <a href="#services" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">What We Do</a>
             <a href="#involved" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">Get Involved</a>
             <a href="#contact" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">Contact</a>
-            <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg">
-              Donate
-            </button>
+           <button
+  onClick={scrollToDonate}
+  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+>
+  Donate
+</button>
           </div>
 
           <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-slate-700">

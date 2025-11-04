@@ -15,7 +15,11 @@ const RootLayout = ({ children }) => {
 }
 
 export const metadata = {
-    title: 'CAPS',
+    title: 'CAPS - Centre Against Poverty and Social Problems',
+    description: 'Empowering communities, transforming lives since 1999',
+    icons: {
+        icon: '/caps-logo.ico',
+    },
 }
 
 export default RootLayout
